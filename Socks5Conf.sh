@@ -107,7 +107,7 @@ EOF"
 {
   \"inbounds\": [
     {
-      \"port\": 1080,
+      \"port\": 3456,
       \"listen\": \"0.0.0.0\",
       \"protocol\": \"socks\",
       \"settings\": {
@@ -126,7 +126,7 @@ EOF"
 EOF"
 
     # Configure firewall
-    sudo ufw allow 1080/tcp
+    sudo ufw allow 3456/tcp
 
     # Restart the service
     sudo systemctl daemon-reload
@@ -138,7 +138,7 @@ EOF"
     echo ""
     echo -e "${BOLD_GREEN}Configuration completed and service started.${NC}"
     echo ""
-    echo -e "${CYAN}Port is (1080).${NC}"
+    echo -e "${CYAN}Port is (3456).${NC}"
     echo ""
     read -p "$(echo -e "${GREEN}Press Enter to continue...${NC}")" -s
 }
